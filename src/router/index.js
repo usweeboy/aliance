@@ -1,25 +1,41 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createRouter, createWebHashHistory } from "vue-router";
+import HomePage from '../components/pages/HomePage'
+import AboutCompanyPage from '../components/pages/AboutCompanyPage'
+import ContractProductPage from '../components/pages/ContractProductPage'
+import OwnProductPage from '../components/pages/OwnProductPage'
+import ProductAGTechPage from '../components/pages/ProductAGTechPage'
+import ProductApPage from '../components/pages/ProductApPage'
+import ContactPage from '../components/pages/ContactPage'
+import PoliticsPage from '../components/pages/PoliticsPage'
+import BlogPage from '../components/pages/BlogPage'
+import BlogOnePage from '../components/pages/BlogOnePage'
+import BlogTwoPage from '../components/pages/BlogTwoPage'
 
 const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
+  { path: '/', component: HomePage },
+  { path: '/about-company', component: AboutCompanyPage },
+  { path: '/contract-product', component: ContractProductPage },
+  { path: '/own-product', component: OwnProductPage },
+  { path: '/product-agtech', component: ProductAGTechPage },
+  { path: '/product-ap', component: ProductApPage },
+  { path: '/contact', component: ContactPage },
+  { path: '/politics', component: PoliticsPage },
+  { path: '/blog', component: BlogPage },
+  { path: '/blog-one', component: BlogOnePage },
+  { path: '/blog-two', component: BlogTwoPage },
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
-  routes
+  history: createWebHashHistory(process.env.BASE_URL),
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { x: 0, y: 0 }
+    }
+  }
 })
+
 
 export default router
