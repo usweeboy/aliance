@@ -1,19 +1,7 @@
 # aliance
 
-## Project setup
-```
-npm install
-```
+Многостраничный сайт на Vue 3. В проекте используется vue router для перехода между страницами. 
+Сайт также адаптивен под многие устройства.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+[Демо](https://capable-gnome-e5eed8.netlify.app/)
+[Figma](https://www.figma.com/file/HSAH0sO9mmPlAzVISIQxoq/Aliance-Production)
