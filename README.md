@@ -1,7 +1,7 @@
 # aliance
 
-Многостраничный сайт на Vue 3. В проекте используется vue router для перехода между страницами.
+Многостраничный сайт на Vue 3. В проекте используется **vue router** для перехода между страницами.  
 Сайт также адаптивен под многие устройства.
 
-Посмотреть проект: [Демо](https://capable-gnome-e5eed8.netlify.app/)
+[Демо](https://capable-gnome-e5eed8.netlify.app/)  
 [Figma](https://www.figma.com/file/HSAH0sO9mmPlAzVISIQxoq/Aliance-Production)
